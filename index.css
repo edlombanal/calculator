@@ -30,3 +30,11 @@ body{
     border-style: solid;
     background-color: rgb(72, 85, 72);
 }
+
+.screen-text{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.result{
+    font-size: xx-large;
+}
