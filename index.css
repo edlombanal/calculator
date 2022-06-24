@@ -7,9 +7,26 @@ body{
     margin: 0;
     height: 100%;
     background-color: rgb(63, 63, 63);
-}s
+}
 
 .content{
     display: flex;
     flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background-color: lightgray;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 7px;
+    gap: 3px;
+    border-width: 2 px;
+    border-style: solid;
+    background-color: rgb(72, 85, 72);
 }
