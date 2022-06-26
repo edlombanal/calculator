@@ -20,6 +20,16 @@ body{
     gap: 10px;
 }
 
+.footer{
+    margin-top: 30px;
+}
+
+.footer-text{
+    font-size: larger;
+    color: aliceblue;
+    font-family: 'Press Start 2P', cursive;
+}
+
 .buttons{
     height: 100%;
     display: flex;
@@ -57,7 +67,7 @@ button{
     color: black;
     font-size: large;
     font-weight: 300;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Quicksand', 'Roboto', sans-serif;
     transition: transform .2s;
 }
 
