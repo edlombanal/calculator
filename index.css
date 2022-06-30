@@ -94,12 +94,16 @@ button:active{
     border-width: 2 px;
     border-style: solid;
     background-color: rgb(72, 85, 72);
+    height: 65px;
+    overflow: hidden;
 }
 
 .screen-text{
     font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
 }
 
 .result{
     font-size: xx-large;
+    height: 32px;
 }
