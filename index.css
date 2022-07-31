@@ -72,7 +72,7 @@ button{
     transition: transform .2s;
 }
 
-#clear{
+#clear, #clearnum{
     background-color: rgb(81, 0, 112);
     color: white;
 }
