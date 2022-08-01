@@ -104,7 +104,17 @@ button:active{
     overflow: hidden;
 }
 
+.operation{
+    height: 16px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .result{
     font-size: xx-large;
     height: 32px;
+}
+
+span{
+    overflow: hidden;
 }

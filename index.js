@@ -1,19 +1,19 @@
 
 function addText(term,num){
     terms[term].textContent=terms[term].textContent+num;
-}
+};
 
 function add(num1,num2){
     return parseFloat(num1)+parseFloat(num2);
-}
+};
 
 function subtract(num1,num2){
     return parseFloat(num1)-parseFloat(num2);
-}
+};
 
 function multiply(num1,num2){
     return parseFloat(num1)*parseFloat(num2);
-}
+};
 
 function divide(num1,num2){
     if(num2==0){
@@ -22,23 +22,23 @@ function divide(num1,num2){
     }else{
         return parseFloat(num1)/parseFloat(num2);
     }  
-}
+};
 
 function modder(num1,num2){
     if(num2==0){
         termSelect = 6;
         return "NaN"
     }else{
-        return parseFloat(num1)%parseFloat(num2);
+        return Math.abs(parseFloat(num1)%parseFloat(num2));
     }  
-}
+};
 
 function add(num1,num2){
     if(num2==null){
         num2=0;
     }
     return parseFloat(num1)+parseFloat(num2);
-}
+};
 
 function operate(num1,num2,op){
     let result;
@@ -68,6 +68,16 @@ function operate(num1,num2,op){
         return result;
     }
     return Math.round(result*100)/100;
+};
+
+function addPoint(){
+    if(terms[0].textContent.indexOf('.')==-1){
+        if(terms[0].textContent == ''){
+            terms[0].textContent = '0.';
+        }else{
+            terms[0].textContent += '.';
+        };
+    };
 }
 
 //State Variables
@@ -151,7 +161,13 @@ equal.addEventListener('click',()=>{
             break;
         default:
             break;
-    }
+    };
+    if(terms[1].textContent[terms[1].textContent.length-1]=='.'){
+        terms[1].textContent = terms[1].textContent.slice(0,-1);
+    };
+    if(terms[2].textContent[terms[2].textContent.length-1]=='.'){
+        terms[2].textContent = terms[2].textContent.slice(0,-1);
+    };
 });
 
 //Event Listeners for operators
@@ -203,6 +219,12 @@ operators.forEach((e)=>{
             default:
                 break;
         };
+        if(terms[1].textContent[terms[1].textContent.length-1]=='.'){
+            terms[1].textContent = terms[1].textContent.slice(0,-1);
+        };
+        if(terms[2].textContent[terms[2].textContent.length-1]=='.'){
+            terms[2].textContent = terms[2].textContent.slice(0,-1);
+        };
     });
 });
 
@@ -243,7 +265,17 @@ clearnumb.addEventListener('click',()=>{
 
 //Event Listeners for decimals
 point.addEventListener('click',()=>{
-    if(terms[0].textContent == ''){
-        terms[0].textContent = '0.';
+    addPoint();
+});
+
+//Event Listeners for sign
+sign.addEventListener('click',()=>{
+    if(terms[0].textContent.indexOf('-')==-1){
+        if(terms[0].textContent != ''){
+            terms[0].textContent = '-' + terms[0].textContent;
+        };
+    }else{
+        terms[0].textContent = terms[0].textContent.slice(1,terms[0].textContent.length);
     }
 });
+
